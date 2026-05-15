@@ -1,0 +1,41 @@
+body{
+    background-color: #111827;
+    color: white;
+    font-family: Arial;
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+}
+
+.card{
+    background: #1f2937;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.card:hover{
+    background: #374151;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.back-btn{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #374151;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.back-btn:hover{
+    background-color: #4b5563;
+}
