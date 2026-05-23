@@ -1,41 +1,80 @@
-body{
-    background-color: #111827;
-    color: white;
-    font-family: Arial;
-    padding: 30px;
+* {
+    box-sizing: border-box;
 }
 
-h1{
+body {
+    background: linear-gradient(160deg, #0f172a 0%, #111827 40%, #1e1b4b 100%);
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    padding: 2rem clamp(1rem, 5vw, 3rem);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1 {
     text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #ffffff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.card{
-    background: #1f2937;
-    padding: 20px;
-    margin: 15px 0;
+.card {
+    background: rgba(31, 41, 55, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.card:hover {
+    background: rgba(55, 65, 81, 0.95);
+    border-color: rgba(129, 140, 248, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(129, 140, 248, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #e2e8f0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.card a:hover {
+    color: #a5b4fc;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1.1rem;
+    background: rgba(55, 65, 81, 0.9);
+    color: #f8fafc;
+    text-decoration: none;
     border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-.card:hover{
-    background: #374151;
+.back-btn:hover {
+    background: #4b5563;
+    transform: translateX(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
-.back-btn{
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    background-color: #374151;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-.back-btn:hover{
-    background-color: #4b5563;
+.back-btn:active {
+    transform: translateX(0);
 }
