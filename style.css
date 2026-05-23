@@ -5,7 +5,10 @@
 }
 
 body {
-    background: linear-gradient(160deg, #0f172a 0%, #111827 40%, #1e1b4b 100%);
+    /* BACKGROUND: Gradasi Abu-abu Charcoal metalik ke Biru Samudra */
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #075eea 100%);
+    background-attachment: fixed;
+    
     color: #f8fafc;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     padding: 2rem clamp(1.5rem, 5vw, 4rem);
@@ -15,24 +18,24 @@ body {
 
 h1 {
     text-align: center;
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 2rem;
-    background: linear-gradient(90deg, #ffffff 0%, #a5b4fc 100%);
+    font-size: clamp(2.25rem, 6vw, 3.25rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 3rem;
+    background: linear-gradient(90deg, #ffffff 30%, #38bdf8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
 }
 
-/* KELAS BARU: Untuk membuat kotak menyamping secara otomatis */
 .card-container {
     display: grid;
-    /* Membuat grid responsif: minimal lebar 250px, maksimal mengisi ruang yang ada */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
     max-width: 1200px;
-    margin: 0 auto; /* Memusatkan kontainer di tengah layar */
+    margin: 0 auto;
+    padding-bottom: 2rem;
 }
 
 .card {
@@ -40,59 +43,75 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 180px; /* Membuat bentuk kotak lebih proporsional (tidak pipih) */
-    background: rgba(31, 41, 55, 0.6);
+    min-height: 160px;
+    background: rgba(15, 23, 42, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 2rem;
+    
+    /* Padding di sini dinonaktifkan (0) agar diisi penuh oleh tag <a> */
+    padding: 0; 
+    
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card:hover {
-    background: rgba(55, 65, 81, 0.8);
-    border-color: rgba(129, 140, 248, 0.5);
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(129, 140, 248, 0.15);
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(30, 41, 59, 0.8);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.25);
+    border-color: #0ea5e9;
 }
 
+/* BAGIAN INI: Yang membuat satu kotak penuh bisa diklik */
 .card a {
     text-decoration: none;
     color: #e2e8f0;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
     text-align: center;
-    transition: color 0.2s ease;
+    transition: all 0.3s ease;
+
+    /* Kode ajaib agar link memenuhi seluruh area kotak */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 160px; 
+    padding: 2rem; /* Jarak teks ke tepi kotak dipindahkan ke sini */
 }
 
 .card:hover a {
-    color: #c7d2fe;
+    /* Saat di-hover, warna teks berubah menjadi Hijau Mint / Cyan Neon */
+    color: #2dd4bf;
 }
 
 .back-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-    padding: 0.75rem 1.25rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    color: #f8fafc;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+    padding: 0.8rem 1.4rem;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    color: #38bdf8;
     text-decoration: none;
     border-radius: 12px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.2s ease;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .back-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: #0ea5e9;
+    color: #ffffff;
+    transform: translateX(-5px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+    border-color: transparent;
 }
 
 .back-btn:active {
