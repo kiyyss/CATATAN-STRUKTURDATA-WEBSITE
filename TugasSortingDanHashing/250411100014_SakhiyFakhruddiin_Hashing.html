@@ -7802,7 +7802,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Close Addressing</p>
+<h2 id="Close-Addressing">Close Addressing<a class="anchor-link" href="#Close-Addressing">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7934,7 +7934,7 @@ A. Linear Probing</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Linier Probing</p>
+<h2 id="Linier-Probing">Linier Probing<a class="anchor-link" href="#Linier-Probing">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7943,7 +7943,7 @@ A. Linear Probing</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># fungsi untuk menghitung isi tabel</span>
@@ -8101,7 +8101,7 @@ A. Linear Probing</p>
 
         <span class="c1"># ubah menjadi DELETED</span>
         <span class="c1"># agar pencarian linear probing tidak rusak</span>
-        <span class="n">table</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"DELETED"</span>
+        <span class="n">table</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"None"</span>
 
         <span class="k">return</span> <span class="kc">True</span>
 
@@ -8117,7 +8117,7 @@ A. Linear Probing</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">size</span> <span class="o">=</span> <span class="mi">10</span>
@@ -8165,10 +8165,11 @@ Isi tabel Awal (Sudah Penuh 10/10): [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 --- Lanjut Update dan Delete ---
 Setelah update 20 jadi 99: [10, 99, 30, 40, 50, 60, 70, 80, 90, 100]
-Setelah delete angka 10: ['DELETED', 99, 30, 40, 50, 60, 70, 80, 90, 100]
+Setelah delete angka 10: ['None', 99, 30, 40, 50, 60, 70, 80, 90, 100]
 
 --- Memasukkan Data Baru Setelah Ada yang Dihapus ---
-Isi tabel Akhir: [110, 99, 30, 40, 50, 60, 70, 80, 90, 100]
+[EROR] Tabel sudah penuh! Angka 110 tidak bisa masuk.
+Isi tabel Akhir: ['None', 99, 30, 40, 50, 60, 70, 80, 90, 100]
 </pre>
 </div>
 </div>
@@ -8181,16 +8182,16 @@ Isi tabel Akhir: [110, 99, 30, 40, 50, 60, 70, 80, 90, 100]
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>B. Quadratic Probing</p>
+<h2 id="B.-Quadratic-Probing">B. Quadratic Probing<a class="anchor-link" href="#B.-Quadratic-Probing">¶</a></h2>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f61433ab-5a7c-476b-a637-41961ff0458a">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f61433ab-5a7c-476b-a637-41961ff0458a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># fungsi insert untuk QUADRATIC PROBING</span>
@@ -8231,6 +8232,7 @@ Isi tabel Akhir: [110, 99, 30, 40, 50, 60, 70, 80, 90, 100]
     <span class="c1"># simpan data pada slot kosong</span>
     <span class="n">table</span><span class="p">[(</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">size</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
     
+
 <span class="c1"># SEARCH</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">jenis_hash</span><span class="o">=</span><span class="s2">"biasa"</span><span class="p">):</span>
 
@@ -8262,6 +8264,7 @@ Isi tabel Akhir: [110, 99, 30, 40, 50, 60, 70, 80, 90, 100]
     <span class="c1"># data tidak ditemukan</span>
     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 
+
 <span class="c1"># UPDATE</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">jenis_hash</span><span class="o">=</span><span class="s2">"biasa"</span><span class="p">):</span>
 
@@ -8279,6 +8282,7 @@ Isi tabel Akhir: [110, 99, 30, 40, 50, 60, 70, 80, 90, 100]
     <span class="c1"># jika tidak ditemukan</span>
     <span class="k">return</span> <span class="kc">False</span>
 
+
 <span class="c1"># DELETE</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">jenis_hash</span><span class="o">=</span><span class="s2">"biasa"</span><span class="p">):</span>
 
@@ -8289,26 +8293,15 @@ Isi tabel Akhir: [110, 99, 30, 40, 50, 60, 70, 80, 90, 100]
     <span class="k">if</span> <span class="n">idx</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
 
         <span class="c1"># ubah menjadi DELETED</span>
-        <span class="n">table</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"DELETED"</span>
+        <span class="n">table</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"None"</span>
 
         <span class="k">return</span> <span class="kc">True</span>
 
     <span class="c1"># jika tidak ditemukan</span>
     <span class="k">return</span> <span class="kc">False</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0c3d656e-3a69-4276-ac7b-bf07753eac23">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">size</span> <span class="o">=</span> <span class="mi">10</span>
+
+
+<span class="n">size</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">create_table</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"--- Memasukkan 10 Data ke Quadratic Probing ---"</span><span class="p">)</span>
@@ -8352,7 +8345,7 @@ Isi tabel Awal (Penuh 10/10): [51, 101, 11, 61, 21, 71, 31, 81, 41, 91]
 
 --- Update dan Delete ---
 Setelah update 21 jadi 999: [51, 101, 11, 61, 999, 71, 31, 81, 41, 91]
-Setelah delete angka 11: [51, 101, 'DELETED', 61, 999, 71, 31, 81, 41, 91]
+Setelah delete angka 11: [51, 101, 'None', 61, 999, 71, 31, 81, 41, 91]
 </pre>
 </div>
 </div>
@@ -8365,7 +8358,7 @@ Setelah delete angka 11: [51, 101, 'DELETED', 61, 999, 71, 31, 81, 41, 91]
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Mid Square Method</p>
+<h2 id="Mid-Square-Method">Mid Square Method<a class="anchor-link" href="#Mid-Square-Method">¶</a></h2>
 </div>
 </div>
 </div>
